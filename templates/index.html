@@ -11,18 +11,19 @@
     <div class="top">
         <div class="title"><h1>My Blog</h1></div>
     </div>
-    {% for post in posts: %}
+    <!-- all_posts list is inserted from get_all_posts (server.py) via Jinja templating -->
+    {% for post in all_posts: %}
       <div class="content">
           <div class="card">
-              <h2>{{post["title"]}}</h2>
-              <p class="text">{{post["subtitle"]}}</p>
-              <a href="{{ url_for('get_post', blog_id=post['id']) }}">Read</a>
+              <h2>{{post.title}}</h2>
+              <p class="text">{{post.subtitle}}</p>
+              <a href="{{ url_for('get_post', blog_id=post.id) }}">Read</a>
           </div>
       </div>
     {% endfor %}
 </div>
 </body>
 <footer>
-    <p>Some year</p>
+    <p>Learning about Jinja Templating</p>
 </footer>
 </html>
