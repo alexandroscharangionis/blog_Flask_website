@@ -1,1 +1,1 @@
-# blog_website
+# Simple blog website using Flask, Jinja & npoint.io
